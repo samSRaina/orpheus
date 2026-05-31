@@ -17,17 +17,19 @@ Singleton {
     property list<var> unpinnedItems: invertPins ? itemsInUserList : itemsNotInUserList
 
     function getTooltipForItem(item) {
-        var result = item.tooltipTitle.length > 0 ? item.tooltipTitle
-                : (item.title.length > 0 ? item.title : item.id);
-        if (item.tooltipDescription.length > 0) result += " • " + item.tooltipDescription;
-        if (Config.options.tray.showItemId) result += "\n[" + item.id + "]";
+        var result = item.tooltipTitle.length > 0 ? item.tooltipTitle : (item.title.length > 0 ? item.title : item.id);
+        if (item.tooltipDescription.length > 0)
+            result += " • " + item.tooltipDescription;
+        if (Config.options.tray.showItemId)
+            result += "\n[" + item.id + "]";
         return result;
     }
 
     // Pinning
     function pin(itemId) {
         var pins = Config.options.tray.pinnedItems;
-        if (pins.includes(itemId)) return;
+        if (pins.includes(itemId))
+            return;
         Config.options.tray.pinnedItems.push(itemId);
     }
     function unpin(itemId) {
@@ -44,10 +46,9 @@ Singleton {
     function togglePin(itemId) {
         var pins = Config.options.tray.pinnedItems;
         if (pins.includes(itemId)) {
-            unpin(itemId)
+            unpin(itemId);
         } else {
-            pin(itemId)
+            pin(itemId);
         }
     }
-
 }

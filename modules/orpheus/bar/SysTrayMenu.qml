@@ -171,7 +171,7 @@ PopupWindow {
                     }
                     StyledText {
                         Layout.fillWidth: true
-                        text: Translation.tr("Back")
+                        text: "Back"
                     }
                 }
             }
@@ -187,7 +187,7 @@ PopupWindow {
             Layout.fillWidth: true
 
             visible: root.trayItemId !== undefined && root.trayItemId.length > 0 && stackView.depth === 1
-            releaseAction: () => TrayService.togglePin(root.trayItemId);
+            releaseAction: () => TrayService.togglePin(root.trayItemId)
 
             contentItem: RowLayout {
                 anchors {
@@ -206,7 +206,7 @@ PopupWindow {
 
                 StyledText {
                     Layout.fillWidth: true
-                    text: TrayService.isPinned(root.trayItemId) ? Translation.tr("Unpin") : Translation.tr("Pin")
+                    text: TrayService.isPinned(root.trayItemId) ? "Unpin" : "Pin"
                 }
             }
         }

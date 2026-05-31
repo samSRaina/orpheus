@@ -1,4 +1,3 @@
-import qs.modules.orpheus.bar.weather
 import QtQuick
 import QtQuick.Layouts
 import Quickshell
@@ -71,7 +70,7 @@ Item { // Bar content region
         ScrollHint {
             reveal: barLeftSideMouseArea.hovered
             icon: Hyprsunset.gamma === 100 ? "light_mode" : "wb_twilight"
-            tooltipText: Translation.tr("Scroll to change brightness")
+            tooltipText: "Scroll to change brightness"
             side: "left"
             anchors.left: parent.left
             anchors.verticalCenter: parent.verticalCenter
@@ -82,15 +81,8 @@ Item { // Bar content region
             anchors.fill: parent
             spacing: 0
 
-            LeftSidebarButton { // Left sidebar button
-                id: leftSidebarButton
-                Layout.alignment: Qt.AlignVCenter
-                Layout.leftMargin: Appearance.rounding.screenRounding
-                colBackground: barLeftSideMouseArea.hovered ? Appearance.colors.colLayer1Hover : ColorUtils.transparentize(Appearance.colors.colLayer1Hover, 1)
-            }
-
             ActiveWindow {
-                Layout.leftMargin: 10 + (leftSidebarButton.visible ? 0 : Appearance.rounding.screenRounding)
+                Layout.leftMargin: 10 + Appearance.rounding.screenRounding
                 Layout.rightMargin: Appearance.rounding.screenRounding
                 Layout.fillWidth: true
                 Layout.fillHeight: true
@@ -112,11 +104,6 @@ Item { // Bar content region
             id: leftCenterGroup
             anchors.verticalCenter: parent.verticalCenter
             implicitWidth: root.centerSideModuleWidth
-
-            Resources {
-                alwaysShowAllResources: root.useShortenedForm === 2
-                Layout.fillWidth: root.useShortenedForm === 2
-            }
 
             Media {
                 visible: root.useShortenedForm < 2
@@ -212,7 +199,7 @@ Item { // Bar content region
         ScrollHint {
             reveal: barRightSideMouseArea.hovered
             icon: "volume_up"
-            tooltipText: Translation.tr("Scroll to change volume")
+            tooltipText: "Scroll to change volume"
             side: "right"
             anchors.right: parent.right
             anchors.verticalCenter: parent.verticalCenter
@@ -327,16 +314,6 @@ Item { // Bar content region
             Item {
                 Layout.fillWidth: true
                 Layout.fillHeight: true
-            }
-
-            // Weather
-            Loader {
-                Layout.leftMargin: 4
-                active: Config.options.bar.weather.enable
-
-                sourceComponent: BarGroup {
-                    WeatherBar {}
-                }
             }
         }
     }
