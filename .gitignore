@@ -1,47 +1,45 @@
-	BraveSoftware/
-	Code - OSS/
-	Kvantum/
-	QtProject.conf
-	Trolltech.conf
-	baloofileinformationrc
-	cava/
-	chrome-flags.conf
-	code-flags.conf
-	darklyrc
-	dconf/
-	dolphinrc
-	fontconfig/
-	foot/
-	fuzzel/
-	go/
-	google-chrome/
-	gtk-3.0/
-	gtk-4.0/
-	gtkrc
-	gtkrc-2.0
-	hyprbackup/
-	hyprland-config/
-	illogical-impulse/
-	kactivitymanagerdrc
-	kde-material-you-colors/
-	kdeglobals
-	kitty/
-	konsolerc
-	matugen/
-	mimeapps.list
-	mpv/
-	orpheus/config.json
-	pavucontrol-qt/
-	pulse/
-	qalculate/
-	quickshell/
-	rog/
-	session/
-	systemd/
-	thorium-flags.conf
-	user-dirs.dirs
-	user-dirs.locale
-	wlogout/
-	xdg-desktop-portal/
-	zshrc.d/
-    EOF
+BraveSoftware/
+Code - OSS/
+Kvantum/
+QtProject.conf
+Trolltech.conf
+baloofileinformationrc
+cava/
+chrome-flags.conf
+code-flags.conf
+darklyrc
+dconf/
+dolphinrc
+fontconfig/
+foot/
+fuzzel/
+go/
+google-chrome/
+gtk-3.0/
+gtk-4.0/
+gtkrc
+gtkrc-2.0
+hyprbackup/
+hyprland-config/
+illogical-impulse/
+kactivitymanagerdrc
+kde-material-you-colors/
+kdeglobals
+kitty/
+konsolerc
+matugen/
+mimeapps.list
+mpv/
+orpheus/config.json
+pavucontrol-qt/
+pulse/
+qalculate/
+rog/
+session/
+systemd/
+thorium-flags.conf
+user-dirs.dirs
+user-dirs.locale
+wlogout/
+xdg-desktop-portal/
+zshrc.d/
